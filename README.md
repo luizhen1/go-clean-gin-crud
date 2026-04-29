@@ -1,6 +1,6 @@
 # Go Clean Architecture CRUD API 🚀
 
-[![Go Version](https://img.shields.io/github/go-mod/go-v/luizhen1/go-clean-gin-crud)](https://go.dev/)
+[![Go Version](https://img.shields.io/badge/Go-1.25+-00ADD8?style=flat&logo=go&logoColor=white)](https://go.dev/)
 [![Docker](https://img.shields.io/badge/docker-powered-blue.svg)](https://www.docker.com/)
 [![Swagger](https://img.shields.io/badge/swagger-OpenAPI-green.svg)](http://swagger.io/)
 
