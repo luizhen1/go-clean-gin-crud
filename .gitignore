@@ -1,0 +1,3 @@
+touch .gitignore
+echo "main" >> .gitignore
+echo ".env" >> .gitignore
