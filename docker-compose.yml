@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: go_clean_mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: crud_db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./migrations:/docker-entrypoint-initdb.d
+
+  api:
+    build: .
+    container_name: go_clean_api
+    restart: always # Isso fará a API reiniciar se o banco ainda não estiver pronto
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      DB_URL: "root:root@tcp(db:3306)/crud_db"
+
+volumes:
+  mysql_data:
